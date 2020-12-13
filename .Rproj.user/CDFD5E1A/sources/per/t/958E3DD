@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1606674136033.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2253569526",
+    "id" : "958E3DD",
+    "lastKnownWriteTime" : 1606672721,
+    "last_content_update" : 1606672721,
+    "path" : "C:/Users/oliwka/Desktop/projekty r/Zaliczenie - Kamilla Kijewska/zad_1.R",
+    "project_path" : "zad_1.R",
+    "properties" : {
+        "cursorPosition" : "1,76",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

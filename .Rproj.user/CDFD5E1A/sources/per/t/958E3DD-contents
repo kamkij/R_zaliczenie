@@ -1,0 +1,52 @@
+#1.1
+Tablica <- read.table(file= "ROLN_3179.csv", sep=";", dec=",", header = TRUE, encoding = "UTF-8", na="NULL")
+d <- data.frame(Tablica, stringsAsFactors = FALSE)
+
+#1.2
+wojewodztwa <- d[2:17, 3:28] 
+Polska <- d[1, 3:28]
+
+Dane_wojewodztw <- colSums(wojewodztwa)
+Dane_Polska <- colSums(Polska);
+Roznica_danych<- Dane_Polska - Dane_wojewodztw 
+c <- if (identical(wojewodztwa,Dane_Polska)==T ) print ("dane się zgadzają") else print("dane się nie zgadzają")
+
+dt<- data.frame(Dane_Polska,Dane_wojewodztw, Roznica_danych)
+write.table(x=dt, file="pol.csv", fileEncoding = "UTF-8")
+
+#1.3
+srednia_uzytrol_2006 <- mean(d[-1, 16])
+srednia_uzytrol_2007 <- mean(d[-1, 17])
+srednia_uzytrol_2008 <- mean(d[-1, 18])
+srednia_uzytrol_2009 <- mean(d[-1, 19])
+srednia_uzytrol_2010 <- mean(d[-1, 20])
+srednia_uzytrol_2011 <- mean(d[-1, 21])
+srednia_uzytrol_2012 <- mean(d[-1, 22])
+srednia_uzytrol_2013 <- mean(d[-1, 23])
+srednia_uzytrol_2014 <- mean(d[-1, 24])
+srednia_uzytrol_2015 <- mean(d[-1, 25])
+srednia_uzytrol_2016 <- mean(d[-1, 26])
+srednia_uzytrol_2017 <- mean(d[-1, 27])
+srednia_uzytrol_2018 <- mean(d[-1, 28])
+
+
+srednia_uzytrol_dolnoslaskie <- mean(sum(d[2, 16:28])/13)
+srednia_uzytrol_kujawsk_pomorskie <- mean(sum(d[3, 16:28])/13)
+srednia_uzytrol_lubelskie <- mean(sum(d[4, 16:28])/13)
+srednia_uzytrol_lubuskie <- mean(sum(d[5, 16:28])/13)
+srednia_uzytrol_ludzkie <- mean(sum(d[6, 16:28])/13)
+srednia_uzytrol_malopolskie <- mean(sum(d[7, 16:28])/13)
+srednia_uzytrol_mazowiecie <- mean(sum(d[8, 16:28])/13)
+srednia_uzytrol_opolskie <- mean(sum(d[9, 16:28])/13)
+srednia_uzytrol_podkarpackie <- mean(sum(d[10, 16:28])/13)
+srednia_uzytrol_podlaskie <- mean(sum(d[11, 16:28])/13)
+srednia_uzytrol_pomorskie <- mean(sum(d[12, 16:28])/13)
+srednia_uzytrol_slaskie <- mean(sum(d[13, 16:28])/13)
+srednia_uzytrol_swietotrzyskie <- mean(sum(d[14, 16:28])/13)
+srednia_uzytrol_warminsko_mazurskie <- mean(sum(d[15, 16:28])/13)
+srednia_uzytrol_wielkopolskie <- mean(sum(d[16, 16:28])/13)
+srednia_uzytrol_zachodnio_pomorskie <- mean(sum(d[17, 16:28])/13)
+
+
+
+
